@@ -23,13 +23,13 @@ version = "1.0.0"
 observabilityIncluded=true
 ```
 
-To enable the extension and publish traces to Opentelemetry, add the following to the `Config.toml` when running your program.
+To enable the extension and publish traces in Opentelemetry format to a reporter endpoint API, add the following to the `Config.toml` when running your program.
 ```toml
 [ballerina.observe]
 tracingEnabled=true
 tracingProvider="opentelemetry"
 
 [ballerinax.opentelemetry]
-agentHostname="127.0.0.1"  # Optional Configuration. Default value is localhost
-agentPort=9411             # Optional Configuration. Default value is 9411
+reporterEndpoint="<TRACE_API>"  # Required Configuration.
+headers="<HEADER_KEY_1=HEADER_VALUE_1&HEADER_KEY_2=HEADER_VALUE_2>"             # Optional Configuration. Default value is "".
 ```

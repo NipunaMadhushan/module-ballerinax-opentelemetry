@@ -22,7 +22,7 @@ import ballerina/regex;
 const PROVIDER_NAME = "opentelemetry";
 const DEFAULT_SAMPLER_TYPE = "const";
 
-configurable string reporterEndpoint = "";
+configurable string reporterEndpoint = ?;
 configurable string headers = "";
 configurable string samplerType = "const";
 configurable decimal samplerParam = 1;
